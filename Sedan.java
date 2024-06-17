@@ -1,7 +1,11 @@
 public class Sedan extends Car{
 
+    public Sedan(String vinNumber, String make, String model, int mileage) {
+        super(vinNumber, make, model, mileage);
+    }
+
     @Override
-    String getInfo() {
-        return null;
+    public String getInfo() {
+        return "Sedan - VIN: " + vinNumber + ", Make: " + make + ", Model: " + model + ", Mileage: " + mileage + " miles";
     }
 }

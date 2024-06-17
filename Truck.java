@@ -1,7 +1,18 @@
 public class Truck extends Car{
-    double towingCapacity;
+    private double towingCapacity;
+
+    public Truck(String vinNumber, String make, String model, int mileage, double towingCapacity) {
+        super(vinNumber, make, model, mileage);
+        this.towingCapacity = towingCapacity;
+    }
+
     @Override
-    String getInfo() {
-        return null;
+    public String getInfo() {
+        return "Truck - VIN: " + vinNumber + ", Make: " + make + ", Model: " + model + ", Mileage: " + mileage + " miles, Towing Capacity: " + towingCapacity + " tons";
+    }
+
+    // Getter for towingCapacity
+    public double getTowingCapacity() {
+        return towingCapacity;
     }
 }
